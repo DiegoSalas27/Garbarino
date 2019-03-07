@@ -9,7 +9,7 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/api/products/${this.props.productoid}`)
+        fetch(`http://localhost:8081/api/products/${this.props.productoid}`)
         .then(response=> response.json())
         .then(producto => {
             this.setState({ producto });
