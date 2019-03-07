@@ -18,7 +18,7 @@ class Details extends Component {
 
     render() {
         const { producto } = this.state;
-        if(producto.enabled === true)
+        if(producto.enabled === false)
             throw new Error('No se pudo obtener producto');
             
         return producto === '' ? 
@@ -30,10 +30,10 @@ class Details extends Component {
                         <img src={producto.image_url} width="200px" height="200px" alt='producto'/>
                         <p>Producto: {producto.description}</p>
                         <p>Precio: {producto.price}</p>
-                        <p>Precio Lista{producto.list_price}</p>
-                        <p>Descuento{producto.discount}</p>
+                        <p>Precio Lista: {producto.list_price}</p>
+                        <p>Descuento: {producto.discount}</p>
                         <a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0"
-                                    onClick={() => this.props.onRouteChange('cardlist')}>Ver detalle</a>
+                                    onClick={() => this.props.onRouteChange('cardlist')}>Regresar</a>
                     </div>
                 </div>
             </div>

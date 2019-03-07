@@ -7,13 +7,17 @@ const CardList = ({ productos,  onRouteChange}) => {
            {
                productos.map((producto, i) => {
                    return(
-                       <Card 
-                           key={i}
-                           id={producto.id}
-                           descripcion={producto.description}
-                           imagen={producto.image_url}
-                           onRouteChange={onRouteChange}
-                       />
+                       <div>
+                            <div className="fl w-50">
+                                <Card 
+                                    key={i}
+                                    id={producto.id}
+                                    descripcion={producto.description}
+                                    imagen={producto.image_url}
+                                    onRouteChange={onRouteChange}
+                                />
+                            </div>
+                       </div>
                    );
                })
            } 
