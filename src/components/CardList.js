@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ productos,  onPassId, onDisabled}) => {
+const CardList = ({ productos,  onPassId, onDisabled, onRouteChange, searchChange }) => {
     return(
         <div>
            {
@@ -17,6 +17,7 @@ const CardList = ({ productos,  onPassId, onDisabled}) => {
                                 onPassId={onPassId}
                                 onDisabled={onDisabled}
                                 habilitado={producto.enabled}
+                                onRouteChange={onRouteChange}
                             />
                         </div>
                    );
