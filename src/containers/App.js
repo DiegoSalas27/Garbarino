@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import Details from '../components/Details';
 import SearchBox from '../components/SearchBox';
 import ErrorBoundry from '../components/ErrorBoundry';
+import { Route, BrowserRouter } from "react-router-dom";
 
 class App extends Component {
     constructor() {
@@ -23,8 +24,8 @@ class App extends Component {
         });
     }
 
-    onRouteChange = (route, id) => {
-        this.setState({ route, productoelegido: id });
+    onPassId = (id) => {
+        this.setState({ productoelegido: id });
     }
 
     onSearchChange = (event) => { 
@@ -54,26 +55,34 @@ class App extends Component {
         const { productos, productoelegido, searchfield } = this.state;
         const productosFiltrados = productos.filter(producto =>{
             return producto.description.toLowerCase().includes(searchfield.toLowerCase());
+            
         })
-        return !productos.length ? 
-            <h1>...Cargando</h1> :
-        (
-            <div className='tc'>
-                <h1>Productos Garbarino</h1>
-                
-                { this.state.route === 'cardlist' 
-                ?   <div>
+
+        return (   
+                <div className='tc'>
+                    <h1>Productos Garbarino</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
-                    <CardList productos={productosFiltrados}
-                              onRouteChange={this.onRouteChange}
-                              onDisabled={this.onDisabled} />
-                    </div>
-                :   <ErrorBoundry>
-                        <Details productoid={productoelegido} onRouteChange={this.onRouteChange}/>
-                    </ErrorBoundry>
-                }            
-            </div>
-        );
+                    <BrowserRouter>
+                        <div>
+                        {!productos.length ? 
+                            <h1>...Cargando</h1> :
+                            <Route 
+                                path={"/productos"} 
+                                component={(props) => <CardList {...props} productos={productosFiltrados}
+                                onPassId={this.onPassId} onDisabled={this.onDisabled}/>}
+                            />
+                        }
+                            <Route 
+                                path={`/detalle/:id`} 
+                                component={(props) => <ErrorBoundry>
+                                        <Details {...props} productoid={productoelegido}/>
+                                    </ErrorBoundry>}
+                            />
+                        </div>
+                    </BrowserRouter>
+                </div>
+            );
+    
     }
 }
 

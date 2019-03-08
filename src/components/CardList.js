@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ productos,  onRouteChange, onDisabled}) => {
+const CardList = ({ productos,  onPassId, onDisabled}) => {
     return(
         <div>
            {
                productos.map((producto, i) => {
+                   
                    return(
                         <div className="fl w-25" key={i}>
                             <Card 
@@ -13,7 +14,7 @@ const CardList = ({ productos,  onRouteChange, onDisabled}) => {
                                 id={producto.id}
                                 descripcion={producto.description}
                                 imagen={producto.image_url}
-                                onRouteChange={onRouteChange}
+                                onPassId={onPassId}
                                 onDisabled={onDisabled}
                                 habilitado={producto.enabled}
                             />

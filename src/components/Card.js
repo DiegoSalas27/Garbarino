@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import image from '../imagenes/losentimos.jpg';
 
 class Card extends Component {
     constructor(props) {
@@ -10,7 +12,7 @@ class Card extends Component {
 
     render() {
 
-        const {id, imagen, descripcion, habilitado, onRouteChange, onDisabled} = this.props;
+        const {id, imagen, descripcion, onPassId, onDisabled} = this.props;
 
         return !this.state.habilitado ? 
             <div /> :
@@ -23,9 +25,10 @@ class Card extends Component {
                         <div>
                             <p>{descripcion}</p>
                             <div className="ph3">
-                                <a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href={`#${id}`}
-                                onClick={() => onRouteChange('details', id)}>Ver detalle</a>
-                                <a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0"
+                                <NavLink to={`/detalle/${id}`} className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" 
+                                onClick={() => onPassId(id)}>Ver detalle</NavLink>
+                                <br/>
+                                <a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" 
                                 onClick={() => {
                                     onDisabled(id);
                                     this.setState({habilitado: false});
