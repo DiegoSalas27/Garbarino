@@ -62,7 +62,7 @@ class App extends Component {
                 <div className='tc'>
                     <h1>Productos Garbarino</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
-                    <BrowserRouter>
+                    <BrowserRouter basename={process.env.PUBLIC_URL}>
                         <div>
                         {!productos.length ? 
                             <h1>...Cargando</h1> :

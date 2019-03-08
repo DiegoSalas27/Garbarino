@@ -2,7 +2,9 @@
   "name": "garbarino",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://diegosalas27.github.io/Garbarino",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
@@ -10,6 +12,8 @@
     "tachyons": "^4.11.1"
   },
   "scripts": {
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build --history-api-fallback",
     "test": "react-scripts test",
@@ -34,6 +38,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DiegoSalas27/Garbarino/issues"
-  },
-  "homepage": "https://github.com/DiegoSalas27/Garbarino#readme"
+  }
 }
