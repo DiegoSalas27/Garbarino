@@ -67,15 +67,15 @@ class App extends Component {
                         {!productos.length ? 
                             <h1>...Cargando</h1> :
                             <Route 
-                                path={"/productos"} 
+                                path={"/producto"} 
                                 component={(props) => <CardList {...props} productos={productosFiltrados}
-                                onPassId={this.onPassId} onDisabled={this.onDisabled}/>}
+                                onPassId={this.onPassId} onDisabled={this.onDisabled} />}
                             />
                         }
                             <Route 
                                 path={`/detalle/:id`} 
                                 component={(props) => <ErrorBoundry>
-                                        <Details {...props} productoid={productoelegido}/>
+                                        <Details {...props} productoid={productoelegido} />
                                     </ErrorBoundry>}
                             />
                         </div>

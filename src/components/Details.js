@@ -43,7 +43,7 @@ class Details extends Component {
                         <p>Precio: {producto.price}</p>
                         <p>Precio Lista: {producto.list_price}</p>
                         <p>Descuento: {producto.discount}</p>
-                        <NavLink to="/productos" className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
+                        <NavLink to="/producto" className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
                                     >Regresar</NavLink>
                     </div>
                 </div>
