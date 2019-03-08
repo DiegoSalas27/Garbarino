@@ -1,15 +1,16 @@
 {
   "main.css": "/Garbarino/static/css/main.acc9707b.chunk.css",
-  "main.js": "/Garbarino/static/js/main.087527a7.chunk.js",
-  "main.js.map": "/Garbarino/static/js/main.087527a7.chunk.js.map",
+  "main.js": "/Garbarino/static/js/main.85f9be85.chunk.js",
+  "main.js.map": "/Garbarino/static/js/main.85f9be85.chunk.js.map",
   "runtime~main.js": "/Garbarino/static/js/runtime~main.23d98299.js",
   "runtime~main.js.map": "/Garbarino/static/js/runtime~main.23d98299.js.map",
   "static/css/2.450e699b.chunk.css": "/Garbarino/static/css/2.450e699b.chunk.css",
-  "static/js/2.d9b9ff94.chunk.js": "/Garbarino/static/js/2.d9b9ff94.chunk.js",
-  "static/js/2.d9b9ff94.chunk.js.map": "/Garbarino/static/js/2.d9b9ff94.chunk.js.map",
+  "static/js/2.6e493775.chunk.js": "/Garbarino/static/js/2.6e493775.chunk.js",
+  "static/js/2.6e493775.chunk.js.map": "/Garbarino/static/js/2.6e493775.chunk.js.map",
   "index.html": "/Garbarino/index.html",
-  "precache-manifest.a5c91fd3c0e9fd98024c16052adca141.js": "/Garbarino/precache-manifest.a5c91fd3c0e9fd98024c16052adca141.js",
+  "precache-manifest.14fb27d3667b4c5df894e1e732b6deac.js": "/Garbarino/precache-manifest.14fb27d3667b4c5df894e1e732b6deac.js",
   "service-worker.js": "/Garbarino/service-worker.js",
   "static/css/2.450e699b.chunk.css.map": "/Garbarino/static/css/2.450e699b.chunk.css.map",
-  "static/css/main.acc9707b.chunk.css.map": "/Garbarino/static/css/main.acc9707b.chunk.css.map"
+  "static/css/main.acc9707b.chunk.css.map": "/Garbarino/static/css/main.acc9707b.chunk.css.map",
+  "static/media/logo.jpg": "/Garbarino/static/media/logo.3c330bcd.jpg"
 }
